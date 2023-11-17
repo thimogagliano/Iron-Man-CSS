@@ -1,0 +1,750 @@
+*,html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #222d86, #6873c5 50%, #222d86);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+button.activeren{
+    font-size: 20px;
+    background-color: #222d86;
+    position: absolute;
+    color: white;
+    padding: 0.5em;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+button.activeren:hover{
+    background-color: orange;
+}
+
+.hoofd{
+    clip-path: polygon(74% 0, 87% 40%, 85% 55%, 83% 92%, 60% 100%, 40% 100%, 17% 92%, 15% 55%, 13% 40%, 26% 0);
+    background-color: #102023;
+    width: 240px;
+    height: 240px;
+    position: absolute;
+    top: 5%;
+    left: calc(50% - 120px);
+
+}
+
+.torso{
+    clip-path: polygon(3% 15%, 97% 15%, 100% 40%, 50% 100%, 0 40%);
+    width: 370px;
+    height: 350px;
+    position: absolute;
+    background-color: #102023;
+    top: 60%;
+    left: calc(50% - 185px);
+    z-index: 1;
+}
+
+.torsov{
+    clip-path: polygon(19% 0, 46% 46%, 54% 46%, 81% 0, 99% 6%, 100% 13%, 61% 66%, 39% 66%, 0 13%, 1% 6%);
+    background-color: white;
+    width: 355px;
+    height: 350px;
+    position: absolute;
+    top: 66%;
+    left: calc(50% - 177.5px);
+    background-image: radial-gradient(
+        #f20015 50%,
+        #f23b13 20%);
+    z-index: 2;
+}
+
+.diamant{
+    clip-path: polygon(50% 3%, 88% 0, 100% 26%, 62% 100%, 37% 100%, 0 26%, 12% 0);
+    width: 112px;
+    height: 95px;
+    background-color: #55e0fd;
+    position: absolute;
+    top: 77.40%;
+    left: calc(50% - 56px);
+    z-index: 3;
+}
+
+.torsorandrechts{
+    clip-path: polygon(92% 0, 97% 24%, 15% 100%, 0 87%);
+    width: 147px;
+    height: 208px;
+    position: absolute;
+    top: 76%;
+    left: 53.45%;
+    background-image: linear-gradient(127deg, #f1d708, #f1d708 49%, #140518 49%, #140518 51%, #323421 53%);
+    z-index: 4;
+}
+
+.torsorandlinks{
+    clip-path: polygon(92% 0, 97% 24%, 15% 100%, 0 87%);
+    transform: scaleX(-1);
+    width: 147px;
+    height: 208px;
+    position: absolute;
+    top: 76%;
+    left: 34.95%;
+    background-image: linear-gradient(127deg, #57f503, #57f503 49%, #140518 49%, #140518 51%, #323421 53%);
+    z-index: 4;
+}
+
+.torsoborst{
+    clip-path: polygon(30% 5%, 70% 5%, 94% 12%, 100% 25%, 92% 23%, 72% 58%, 68% 51%, 32% 51%, 28% 58%, 8% 23%, 0% 25%, 6% 12%);
+    width: 260px;
+    height: 250px;
+    position: absolute;
+    top: 54%;
+    left: calc(50% - 130px);
+    background-image: linear-gradient(90deg, #7b0014, #7b0014 50%, #6b010f 50%);
+    z-index: 5;
+}
+
+.torsoboven{
+    clip-path: polygon(18% 0, 82% 0, 100% 30%, 84.5% 100%, 15.5% 100%, 0 30%);
+    width: 505px;
+    height: 120px;
+    background-color: #102023;
+    position: absolute;
+    top: 49%;
+    left: calc(50% - 252.5px);
+}
+
+.schouderlinks{
+    clip-path: polygon(62% 5%, 95% 55%, 85% 81%, 46% 94%, 35% 80%, 0% 35%);
+    width: 145px;
+    height: 120px;
+    position: absolute;
+    top: 48%;
+    left: 30%;
+    background-image: linear-gradient(40deg, #e01108 20%, #cc0201 50%);
+    z-index: 6;
+}
+
+.schouderrechts{
+    clip-path: polygon(62% 5%, 95% 55%, 85% 81%, 46% 94%, 35% 80%, 0% 35%);
+    transform: scaleX(-1);
+    width: 145px;
+    height: 120px;
+    position: absolute;
+    top: 48%;
+    right: 30%;
+    background-image: linear-gradient(40deg, #e01108 20%, #cc0201 50%);
+    z-index: 6;
+}
+
+.schoudertoplinks{
+    clip-path: polygon(53% 6%, 96% 75%, 38% 96%, 9% 50%, 14% 24%);
+    width: 160px;
+    height: 130px;
+    position: absolute;
+    top: 38%;
+    left: 36%;
+    background-image: linear-gradient(90deg, #f64719 30%, #ef001c 60%);
+    z-index: 7;
+}
+
+.schoudertoprechts{
+    clip-path: polygon(53% 6%, 96% 75%, 38% 96%, 9% 50%, 14% 24%);
+    transform: scaleX(-1);
+    width: 160px;
+    height: 130px;
+    position: absolute;
+    top: 38%;
+    right: 36%;
+    background-image: linear-gradient(90deg, #f64719 30%, #ef001c 60%);
+    z-index: 7;
+}
+
+.nek{
+    clip-path: polygon(87% 26%, 86% 45%, 79% 61%, 61% 90%, 57% 87%, 39% 87%, 35% 90%, 16% 60%, 10% 43%, 9% 26%);
+    width: 210px;
+    height: 225px;
+    position: absolute;
+    top: 27%;
+    left: calc(50% - 101px);
+    background-color: #102023;
+    z-index: 8;
+}
+
+.voorhoofd{
+    clip-path: polygon(20% 0, 80% 0, 89% 7%, 103% 51%, 101% 76%, 0 76%, 0 41%, 10% 7%);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 3.5%;
+    left: calc(50% - 75px);
+    background-image: linear-gradient(90deg, #fcea2d 50%, #24fe74 50%);
+    z-index: 10;
+}
+
+.hoofdbottom{
+    clip-path: polygon(6% 28%, 94% 28%, 100% 39%, 96% 50%, 75% 68%, 65% 100%, 35% 100%, 25% 68%, 4% 50%, 0 39%);
+    width: 180px;
+    height: 210px;
+    position: absolute;
+    top: 9%;
+    left: calc(50% - 90px);
+    background-image: linear-gradient(90deg, #fab709 37%, #f58514 50%, #fab709 63%);
+    z-index: 9;
+}
+
+.nekonder{
+    clip-path: polygon(30% 99%, 12% 69%, 0 52%, 0% 50%, 32% 63%, 35% 75%, 65% 75%, 67% 65%, 90% 54%, 100% 52%, 88% 69%, 70% 99%);
+    width: 135px;
+    height: 132px;
+    position: absolute;
+    top: 36%;
+    left: calc(50% - 67.5px);
+    background-image: linear-gradient(90deg, #f57a1c 50%, #f34016 50%);
+    z-index: 11;
+}
+
+.hoofdtop{
+    clip-path: polygon(100% 0, 97% 45%, 80% 97%, 51% 100%, 20% 97%, 3% 45%, 0 0);
+    width: 70px;
+    height: 75px;
+    position: absolute;
+    top: 3.5%;
+    left: calc(50% - 35px);
+    background-image: radial-gradient(at 50% bottom, #e5012d 40%, #9a0011 50%);
+    z-index: 12;
+}
+
+.hoofdtopschild{
+    clip-path: polygon(25% 0, 75% 0, 83% 8%, 100% 8%, 100% 25%, 67% 50%, 33% 50%, 0 25%, 0 8%, 17% 8%);
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    top: 2.70%;
+    left: calc(50% - 35px);
+    background-image: radial-gradient(100% 50% at top , #7f071b 20%, black 20%, black 40%, #e30318 40%, #e30318 60%);
+    z-index: 13;
+}
+
+.oorlinks{
+    clip-path: polygon(80% 0, 89% 0, 96% 118%, 72% 96%, 63% 88%, 53% 40%, 65% 11%);
+    width: 50px;
+    height: 85px;
+    position: absolute;
+    top: 16%;
+    left: 40.2%;
+    background-color: black;
+}
+
+.oorrechts{
+    clip-path: polygon(80% 0, 89% 0, 96% 118%, 72% 96%, 63% 88%, 53% 40%, 65% 11%);
+    transform: scaleX(-1);
+    width: 50px;
+    height: 85px;
+    position: absolute;
+    top: 16%;
+    right: 40.2%;
+    background-color: black;
+}
+
+.voorhoofdonderschild{
+    clip-path: polygon(0 0, 35% 25%, 65% 25%, 100% 0, 89% 57%, 50% 75%, 11% 57%);
+    width: 110px;
+    height: 95px;
+    position: absolute;
+    top: 9%;
+    left: calc(50% - 55px);
+    background-image: radial-gradient(52% 50% at top, black 100%, #7f071b 100%, #7f071b 115%, #e30318 90%);
+    z-index: 11;
+}
+
+.vhvierkantlinks{
+    clip-path: polygon(47% -2%, 54% 80%, 14% 93%, 11% 21%);
+    width: 45px;
+    height: 50px;
+    position: absolute;
+    top: 3.6%;
+    left: 44.8%;
+    background-image: linear-gradient(95deg, #fd7012 37%, #e68828 37%);
+    z-index: 13;
+}
+
+.vhvierkantrechts{
+    clip-path: polygon(47% -2%, 54% 80%, 14% 93%, 11% 21%);
+    transform: scaleX(-1);
+    width: 45px;
+    height: 50px;
+    position: absolute;
+    top: 3.6%;
+    right: 44.9%;
+    background-image: linear-gradient(95deg, #fb4403 37%, #dd6010 37%);
+    z-index: 13;
+}
+
+.vhzijkantlinks{
+    clip-path: polygon(80% 55%, 100% 0, 100% 100%, 89% 96%, 79% 81%);
+    width: 90px;
+    height: 95px;
+    position: absolute;
+    top: 7%;
+    left: 37.9%;
+    background-color: #f54413;
+    z-index: 11;
+}
+
+.vhzijkantrechts{
+    clip-path: polygon(80% 55%, 100% 0, 100% 100%, 89% 96%, 79% 81%);
+    transform: scaleX(-1);
+    width: 90px;
+    height: 95px;
+    position: absolute;
+    top: 7%;
+    right: 37.9%;
+    background-color: #fa0604;
+    z-index: 11;
+}
+
+.oogholtelinks{
+    clip-path: polygon(16% 8%, 97% 31%, 98% 58%, 59% 94%, 15% 63%, 6% 32%);
+    width: 80px;
+    height: 75px;
+    position: absolute;
+    top: 19%;
+    left: 42.5%;
+    background-color: #fef92b;
+    z-index: 10;
+}
+
+.oogholterechts{
+    clip-path: polygon(16% 8%, 97% 31%, 98% 58%, 59% 94%, 15% 63%, 6% 32%);
+    transform: scaleX(-1);
+    width: 80px;
+    height: 75px;
+    position: absolute;
+    top: 19%;
+    right: 42.5%;
+    background-color: #fd5a24;
+    z-index: 10;
+}
+
+.neus{
+    clip-path: polygon(20% 30%, 80% 30%, 80% 70%, 90% 70%, 100% 100%, 0 100%, 10% 70%, 20% 70%);
+    width: 45px;
+    height: 40px;
+    position: absolute;
+    top: 18%;
+    left: calc(50% - 22.5px);
+    background-image: linear-gradient(#e30318 69%, #c2fd01 31%);
+    z-index: 14;
+}
+
+.ooglinks{
+    clip-path: polygon(50% 45%, 88% 44%, 98% 72%, 76% 93%, 12% 94%, 6% 72%);
+    transform: scaleX(-1);
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 16%;
+    left: 44.5%;
+    background-color: #0d0e35;
+    z-index: 15;
+}
+
+
+.oogrechts{
+    clip-path: polygon(50% 45%, 88% 44%, 98% 72%, 76% 93%, 12% 94%, 6% 72%);
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 16%;
+    right: 44.5%;
+    background-color: #0d0e35;
+    z-index: 15;
+}
+
+.oogcentrumlinks{
+    clip-path: polygon(84% 59%, 81% 75%, 24% 72%, 10% 58%, 20% 41%);
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    top: 18%;
+    left: 44.6%;
+    background-color: #51fcfd;
+    z-index: 16;
+}
+
+.oogcentrumrechts{
+    clip-path: polygon(84% 59%, 81% 75%, 24% 72%, 10% 58%, 20% 41%);
+    transform: scaleX(-1);
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    top: 18%;
+    right: 44.6%;
+    background-color: #51fcfd;
+    z-index: 16
+}
+
+.kin{
+    clip-path: polygon(30% 17%, 70% 17%, 85% 30%, 100% 95%, 80% 100%, 20% 100%, 0 95%, 15% 30%);
+    width: 42px;
+    height: 40px;
+    position: absolute;
+    top: 38.3%;
+    left: calc(50% - 21px);
+    background-color: #9c0406;
+    z-index: 10;
+}
+
+.kin2{
+    clip-path: polygon(30% 17%, 70% 17%, 85% 30%, 100% 95%, 80% 100%, 20% 100%, 0 95%, 15% 30%);
+    width: 32px;
+    height: 35px;
+    position: absolute;
+    top: 39%;
+    left: calc(50% - 16px);
+    background-color: #f42d2a;
+    z-index: 10;
+}
+
+.wanglinks{
+    clip-path: polygon(75% -1%, 72% 44%, 75% 72%, 19% 93%, 24% 51%, 37% 69%, 46% 64%, 46% 37%, 61% 11%);
+    transform: scaleX(-1);
+    width: 100px;
+    height: 112px;
+    position: absolute;
+    top: 27%;
+    left: 41.5%;
+    background-color: #f00310;
+    z-index: 10;
+}
+
+.wangrechts{
+    clip-path: polygon(75% -1%, 72% 44%, 75% 72%, 19% 93%, 24% 51%, 37% 69%, 46% 64%, 46% 37%, 61% 11%);
+    width: 100px;
+    height: 112px;
+    position: absolute;
+    top: 27%;
+    right: 41.5%;
+    background-color: #ec4302;
+    z-index: 10;
+}
+
+.mond{
+    clip-path: polygon(8% 93%, 18% 71%, 26% 61%, 74% 61%, 82% 71%, 91% 94%, 87% 97%, 78% 76%, 73% 71%, 29% 70%, 22% 75%, 12% 96%);
+    width: 110px;
+    height: 76px;
+    position: absolute;
+    top: 28%;
+    left: calc(50% - 55px);
+    background-color: black;
+    z-index: 11;
+}
+
+.wanglinkslaag{
+    clip-path: polygon(62% 15%, 79% 2%, 78% 74%, 23% 94%, 23% 86%, 33% 83%, 32% 72%, 51% 62%, 51% 32%);
+    transform: scaleX(-1);
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 30%;
+    left: 41.8%;
+    background-color: #940012;
+    z-index: 10;
+}
+
+.wangrechtslaag{
+    clip-path: polygon(62% 15%, 79% 2%, 78% 74%, 23% 94%, 23% 86%, 33% 83%, 32% 72%, 51% 62%, 51% 32%);
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 30%;
+    right: 41.8%;
+    background-color: #940012;
+    z-index: 10;
+}
+
+.wanglinkslaag2{
+    clip-path: polygon(74% 0%, 85% 15%, 81% 60%, 70% 55%, 37% 80%, 40% 34%);
+    transform: scaleX(-1);
+    width: 50px;
+    height: 63px;
+    position: absolute;
+    top: 29%;
+    left: 42.6%;
+    background-image: linear-gradient(90deg, #cc7c17, #cc7c17 72%, #ec9e03 72%);
+    z-index: 11;
+}
+
+.wangrechtslaag2{
+    clip-path: polygon(74% 0%, 85% 15%, 81% 60%, 70% 55%, 37% 80%, 40% 34%);
+    width: 50px;
+    height: 63px;
+    position: absolute;
+    top: 29%;
+    right: 42.6%;
+    background-image: linear-gradient(90deg, #cc7c17, #cc7c17 72%, #ec9e03 72%);
+    z-index: 11;
+}
+
+.nekrandlinks{
+    clip-path: polygon(85% 88%, 81% 72%, 54% 64%, 53% 55%, 31% 42%, 30% 16%, 17% 5%, 12% 43%, 50% 77%);
+    width: 92px;
+    height: 133px;
+    position: absolute;
+    top: 34%;
+    left: 42.3%;
+    background-image: linear-gradient(#a10510 10%, #f21812 36%, #f01a5c 36%, #f01a5c 60%, #f02113 60%);
+    z-index: 12;
+}
+
+.nekrandrechts{
+    clip-path: polygon(85% 88%, 81% 72%, 54% 64%, 53% 55%, 31% 42%, 30% 16%, 17% 5%, 12% 43%, 50% 77%);
+    transform: scaleX(-1);
+    width: 92px;
+    height: 133px;
+    position: absolute;
+    top: 34%;
+    right: 42.3%;
+    background-image: linear-gradient(#a10510 10%, #f21812 36%, #f01a5c 36%, #f01a5c 60%, #f02113 60%);
+    z-index: 12;
+}
+
+.schoudertoprandlinks{
+    clip-path: polygon(44% 61%, 81% 50%, 92% 70%, 40% 84%, 6% 39%, 12% 14%);
+    width: 135px;
+    height: 135px;
+    position: absolute;
+    top: 40%;
+    left: 36.5%;
+    background-image: linear-gradient(97deg, #fac1b4, #fac1b4 45%, #f78783 45%, #f78783 60%, #f86965 60%);
+    z-index: 8;
+}
+
+.schoudertoprandrechts{
+    clip-path: polygon(44% 61%, 81% 50%, 93% 70%, 40% 84%, 6% 39%, 12% 14%);
+    transform: scaleX(-1);
+    width: 135px;
+    height: 135px;
+    position: absolute;
+    top: 40%;
+    right: 36.5%;
+    background-image: linear-gradient(97deg, #f44b2e, #f44b2e 45%, #f77574 45%, #f77547 60%, #f25653 60%);
+    z-index: 8;
+}
+
+.schouderrandlinks{
+    clip-path: polygon(78% 43%, 69% 74%, 31% 92%, 18% 73%);
+    width: 143px;
+    height: 100px;
+    position: absolute;
+    top: 52%;
+    left: 32%;
+    background-color: #f51b00;
+    z-index: 8;
+}
+
+.schouderrandrechts{
+    clip-path: polygon(78% 43%, 69% 74%, 31% 92%, 18% 73%);
+    transform: scaleX(-1);
+    width: 143px;
+    height: 100px;
+    position: absolute;
+    top: 52%;
+    right: 32%;
+    background-color: #f11602;
+    z-index: 8;
+}
+
+.diamantdetail1{
+    clip-path: polygon(89% 3%, 61% 85%, 39% 85%, 11% 3%);
+    width: 100px;
+    height: 110px;
+    position: absolute;
+    top: 1%;
+    left: calc(50% - 50px);
+    background-color: #58f3f6;
+    z-index: 15;
+}
+
+.diamantdetail2{
+    clip-path: polygon(87% 3%, 52% 85%, 48% 85%, 13% 3%);
+    width: 90px;
+    height: 110px;
+    position: absolute;
+    top: 1%;
+    left: calc(50% - 45px);
+    background-image: linear-gradient(90deg, #67eafb, #67eafb 50%, #54e4fe 50%);
+    z-index: 15;
+}
+
+.diamantdriehoek1{
+    clip-path: polygon(16% 26%, 50% 29%, 84% 26%, 90% 38%, 50% 66%, 10% 38%);
+    width: 124px;
+    height: 100px;
+    position: absolute;
+    top: -27%;
+    left: calc(50% - 62px);
+    background-image: linear-gradient(90deg, #62fcfc, #62fcfc 50%, #50fcfc 50%);
+    z-index: 16;
+}
+
+.diamantdriehoek2{
+    clip-path: polygon(11% 29%, 50% 32%, 89% 29%, 91% 34%, 50% 63%, 9% 34%);
+    width: 110px;
+    height: 90px;
+    position: absolute;
+    top: -27.5%;
+    left: calc(50% - 55px);
+    background-image: linear-gradient(90deg, #6ca0fb, #6ca0fb 50%, #5790fb 50%);
+    z-index: 16;
+}
+
+.diamantdriehoek3{
+    clip-path: polygon(10% 28%, 50% 32%, 89% 28%, 89% 29%, 50% 60%, 9% 29%);
+    width: 84px;
+    height: 63px;
+    position: absolute;
+    top: -18%;
+    left: calc(50% - 42px);
+    background-image: linear-gradient(90deg, #6ab3fc, #6ab3fc 50%, #58a7fe 50%);
+    z-index: 16;
+}
+
+.borstdriehoek{
+    clip-path: polygon(50% 28%, 0 0, 100% 0);
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    top: 60%;
+    left: calc(50% - 28px);
+    background-color: #de1703;
+    z-index: 8;
+}
+
+.borstdetaillinks{
+    clip-path: polygon(55% 2%, 71% 11%, 81% 15%, 29% 69%, 6% 26%);
+    width: 146px;
+    height: 133px;
+    position: absolute;
+    top: 59%;
+    left: 41%;
+    background-color: #9d0009;
+    z-index: 6;
+}
+
+.borstdetailrechts{
+    clip-path: polygon(55% 2%, 71% 11%, 80% 15%, 29% 69%, 6% 26%);
+    transform: scaleX(-1);
+    width: 146px;
+    height: 133px;
+    position: absolute;
+    top: 59%;
+    right: 41%;
+    background-color: #8c0103;
+    z-index: 6;
+}
+
+.slaapdetaillinks{
+    clip-path: polygon(42% 25%, 54% 13%, 54% 75%, 42% 84%);
+    width: 40px;
+    height: 55px;
+    position: absolute;
+    top: 13%;
+    left: 42.8%;
+    background-color: black;
+    z-index: 17;
+}
+
+.slaapdetailrechts{
+    clip-path: polygon(42% 25%, 54% 13%, 54% 75%, 42% 84%);
+    transform: scaleX(-1);
+    width: 40px;
+    height: 55px;
+    position: absolute;
+    top: 13%;
+    right: 42.8%;
+    background-color: black;
+    z-index: 17;
+}
+
+.mondplat{
+    clip-path: polygon(11% 56%, 89% 55%, 98% 63%, 96% 70%, 87% 66%, 13% 65%, 4% 69%, 0 64%);
+    width: 66px;
+    height: 60px;
+    position: absolute;
+    top: 30.3%;
+    left: calc(50% - 33px);
+    background-color: black;
+    z-index: 18;
+}
+
+.d-animation{
+    animation-name: shinen;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shinen{
+    0% { filter: brightness(0.8); }
+    50% { filter:brightness(1.7); }
+    100% { filter: brightness(0.8); }
+}
+
+.o-animation{
+    animation-name: ogen;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ogen{
+    0% { background-color: #51fcfd; }
+    40% { background-color: red; }
+    45% { background-color: #51fcfd;}
+    47% { background-color: red; }
+    48% { background-color: #51fcfd;}
+    50% { background-color: red; }
+    52% { background-color: #51fcfd;}
+    53% { background-color: red; }
+    55% { background-color: #51fcfd;}
+    60% { background-color: red; }
+    100% { background-color: #51fcfd;}
+}
+
+.t-animation{
+    animation-name: ademen;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ademen{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+    100% { transform: scale(1); }
+}
+
+.m-animation{
+    animation-name: praten;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes praten{
+    0% { transform: scaleY(1); }
+    44% { transform: scaleY(1); }
+    45% { transform: scaleY(2); }
+    48% { transform: scaleY(1); }
+    50% { transform: scaleY(2); }
+    52% { transform: scaleY(1); }
+    55% { transform: scaleY(2); }
+    56% { transform: scaleY(1); }
+    100% { transform: scaleY(1); }
+    
+}
+
+
